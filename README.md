@@ -89,10 +89,12 @@ Sample weights were computed using **inverse class frequency**, ensuring balance
   - `alpha = 0.1`
   - `mixup_prob = 0.15`
 
-
+---
 
 ### Model Selection
 - The best model was saved based on the **lowest validation loss**.
+
+---
 
 ###  Results (Test Set)
 
@@ -128,8 +130,9 @@ Sample weights were computed using **inverse class frequency**, ensuring balance
 
 <img width="2177" height="2280" alt="cm" src="https://github.com/user-attachments/assets/2ad5941b-8512-4070-8e0b-71e340f394b3" />
 
-### Grad-CAM visualization
+---
 
+### Grad-CAM visualization
 
 <img width="1580" height="2639" alt="grad_cam" src="https://github.com/user-attachments/assets/4ec13e99-d171-4191-b8ad-66f5350f6722" />
 
