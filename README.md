@@ -35,7 +35,11 @@ From this project, I found that a high-end model is not always required to achie
 
 ### Train / Val / Test Split
 The dataset was sorted by filename and split into **80% train / 10% val / 10% test** using **stratified sampling** to preserve class distribution.  
-I also verified that there is **no filename overlap** between splits to avoid data leakage.  
+
+We verified that there is **no filename overlap** between the training, validation, and test splits to avoid direct data leakage.
+
+However, the ideal approach for medical imaging is a **patient-level split** (to ensure images from the same patient do not appear in multiple splits).  
+Unfortunately, this dataset does not provide **patient identifiers or metadata**, so patient-level leakage cannot be fully ruled out.
 
 ### Normalization
 Dataset-specific **mean** and **std** were computed from the **training set only** (Resize 256 → CenterCrop 224 → ToTensor) and used for normalization.
@@ -90,9 +94,9 @@ Sample weights were computed using **inverse class frequency**, ensuring balance
 ### Model Selection
 - The best model was saved based on the **lowest validation loss**.
 
-##  Results (Test Set)
+###  Results (Test Set)
 
-### Overall Performance
+**Overall Performance**
 | Metric | Score |
 |--------|------:|
 | Accuracy | **99.84%** |
@@ -109,7 +113,7 @@ Sample weights were computed using **inverse class frequency**, ensuring balance
 
 ---
 
-### Per-Class Performance
+**Per-Class Performance**
 | Class | Precision | Recall | F1-score | Support |
 |------|----------:|-------:|---------:|--------:|
 | F0 | 1.0000 | 1.0000 | 1.0000 | 212 |
