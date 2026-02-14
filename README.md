@@ -36,7 +36,7 @@ From this project, I found that a high-end model is not always required to achie
 ### Train / Val / Test Split
 The dataset was sorted by filename and split into **80% train / 10% val / 10% test** using **stratified sampling** to preserve class distribution.  
 
-We verified that there is **no filename overlap** between the training, validation, and test splits to avoid direct data leakage.
+I verified that there is **no filename overlap** between the training, validation, and test splits to avoid direct data leakage.
 
 However, the ideal approach for medical imaging is a **patient-level split** (to ensure images from the same patient do not appear in multiple splits).  
 Unfortunately, this dataset does not provide **patient identifiers or metadata**, so patient-level leakage cannot be fully ruled out.
