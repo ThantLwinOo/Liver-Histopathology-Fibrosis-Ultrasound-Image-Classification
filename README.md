@@ -95,6 +95,19 @@ Sample weights were computed using **inverse class frequency**, ensuring balance
 - The best model was saved based on the **lowest validation loss**.
 
 ---
+### Training Vs Validation Loss
+
+<img width="2680" height="1639" alt="loss" src="https://github.com/user-attachments/assets/28f1c3e4-0307-43a6-9f36-e4706a4410e5" />
+
+--- 
+
+### Training Vs Validation Accuracy
+
+
+<img width="2680" height="1639" alt="acc" src="https://github.com/user-attachments/assets/f468db49-514b-4d2e-b5ac-befa031042ca" />
+
+
+---
 
 ###  Results (Test Set)
 
